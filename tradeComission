@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        String nameOfCity = scan.nextLine();
+        double moneyOfSales = Double.parseDouble(scan.nextLine());
+
+        double commission = 0;
+
+        if (moneyOfSales > 0 & moneyOfSales <= 500){
+            if (nameOfCity.equals("Sofia")){
+                commission = 0.05 * moneyOfSales;
+                System.out.printf("%.2f", commission);
+            }else if (nameOfCity.equals("Varna")){
+                commission = 0.045 * moneyOfSales;
+                System.out.printf("%.2f", commission);
+            }else if (nameOfCity.equals("Plovdiv")){
+                commission = 0.055 * moneyOfSales;
+                System.out.printf("%.2f", commission);
+            }else {
+                System.out.print("error");
+            }
+        }else if (moneyOfSales > 500 & moneyOfSales <= 1000){
+            if (nameOfCity.equals("Sofia")){
+                commission = 0.07 * moneyOfSales;
+                System.out.printf("%.2f", commission);
+            }else if (nameOfCity.equals("Varna")){
+                commission = 0.075 * moneyOfSales;
+                System.out.printf("%.2f", commission);
+            }else if (nameOfCity.equals("Plovdiv")){
+                commission = 0.08 * moneyOfSales;
+                System.out.printf("%.2f", commission);
+            }else {
+                System.out.print("error");
+            }
+        }else if (moneyOfSales > 1000 & moneyOfSales <= 10000){
+            if (nameOfCity.equals("Sofia")){
+                commission = 0.08 * moneyOfSales;
+                System.out.printf("%.2f", commission);
+            }else if (nameOfCity.equals("Varna")){
+                commission = 0.1 * moneyOfSales;
+                System.out.printf("%.2f", commission);
+            }else if (nameOfCity.equals("Plovdiv")){
+                commission = 0.12 * moneyOfSales;
+                System.out.printf("%.2f", commission);
+            }else {
+                System.out.println("error");
+            }
+        }else if (moneyOfSales > 10000){
+            if (nameOfCity.equals("Sofia")){
+                commission = 0.12 * moneyOfSales;
+                System.out.printf("%.2f", commission);
+            }else if (nameOfCity.equals("Varna")){
+                commission = 0.13 * moneyOfSales;
+                System.out.printf("%.2f", commission);
+            }else if (nameOfCity.equals("Plovdiv")){
+                commission = 0.145 * moneyOfSales;
+                System.out.printf("%.2f", commission);
+            }else {
+                System.out.println("error");
+            }
+        }else {
+           System.out.println("error");
+        }
+
+    }
+}
+
